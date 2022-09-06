@@ -1,3 +1,5 @@
+//	You will need to create a password to use with applications, your normal gmail password will not work
+//	https://myaccount.google.com/security >> Signing Into Google >> Setup App Passwords
 var nodemailer = require('nodemailer')
 const JSONResponse = require('./json.helper')
 
