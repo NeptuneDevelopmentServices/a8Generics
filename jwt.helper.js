@@ -34,8 +34,8 @@ class JWTHelper {
 			}
 		)
 	}
-	static killToken(req, res) {
-		res.clearCookie('jwt_auth')
+	static killToken(req, res, name) {
+		res.clearCookie(name)
 	}
 }
 
