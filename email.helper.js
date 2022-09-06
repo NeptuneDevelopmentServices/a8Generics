@@ -4,15 +4,16 @@ var nodemailer = require('nodemailer')
 const JSONResponse = require('./json.helper')
 
 class Emailer {
-	transporter = nodemailer.createTransport({
-		service: 'gmail', //Example
-		auth: {
-			user: "email",
-			pass: "password",
-		},
-	})
-
-	constructor() {}
+	constructor(email, password) {
+		this.transporter = nodemailer.createTransport({
+			service: 'gmail', //Example
+			auth: {
+				user: email,
+				pass: password,
+			},
+		})
+		this.owner = email
+	}
 	/**
 	 * Sends an email to the intended recipient.
 	 * @param {*} to - The recipient or recipient array for the email
@@ -22,7 +23,7 @@ class Emailer {
 	sendMail(to, sub, body) {
 		let mailOptions = {
 			to: to,
-			from: email,
+			from: this.owner,
 			subject: sub,
 			text: body,
 		}
