@@ -37,4 +37,4 @@ class Emailer {
 	}
 }
 
-module.exports = new Emailer('email@mail.com', 'sup3rs3cur3p4$$w0rd')
+module.exports = new Emailer('email@gmail.com', 'sup3rs3cur3p4$$w0rd')
